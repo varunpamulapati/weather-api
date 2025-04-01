@@ -1,0 +1,48 @@
+
+HOW TO RUN - Weather Forecast Spring Boot Project
+==================================================
+
+✅ Prerequisites:
+----------------
+- Java 17 or higher
+- Maven installed
+- Internet connection (to fetch Weather.gov API and dependencies)
+
+📦 Steps to Run:
+----------------
+
+1. Unzip the project folder
+2. Open a terminal/command prompt and navigate into the project directory
+
+3. Build the project:
+   mvn clean install
+
+4. Run the application:
+   mvn spring-boot:run
+
+5. Once running, the app will be available at:
+   http://localhost:8081
+
+
+🌐 Example API Call:
+--------------------
+GET http://localhost:8081/weather/forecast/36.244,-94.149?date=2025-04-01&metric=true
+
+🧪 Running Tests:
+-----------------
+To run all unit and integration tests:
+   mvn test
+
+💾 H2 Console (Optional - In-Memory DB Viewer):
+----------------------------------------------
+Access: http://localhost:8081/h2-console
+
+- JDBC URL: jdbc:h2:mem:testdb
+- Username: sa
+- Password: (leave blank)
+
+📁 Notes:
+---------
+- You can open the project in Eclipse as a Maven project.
+- Make sure port 8081 is available before running.
+- Metric=true returns temperatures in Celsius and wind in kph.
